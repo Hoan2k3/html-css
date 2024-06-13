@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="render">
+      <button id="addBtn" onclick="newinput()">Add</button>
+      <button id="sumBtn">Sum</button>
+      <br />
+      <input type="number" class="inp" />
+    </div>
+    <script>
+      function render() {
+        $("#render").append(`<br/> <input type="number" class="inp">`);
+      }
+      $("#addBtn").click(function () {
+        render();
+      });
+
+      $("#sumBtn").click(function () {
+        console.log("sumBtn ckick");
+        var s = 0;
+        var arr = $(".inp");
+        for (let i = 0; i < arr.length; i++) {
+          s += parseInt(arr[i].value);
+        }
+        alert("Tong gia tri la " + s);
+      });
+    </script>
+  </body>
+</html>

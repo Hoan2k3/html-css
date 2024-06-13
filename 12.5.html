@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+      img {
+        width: 150%;
+        height: auto;
+        margin-right: 0;
+        margin-left: 40px;
+      }
+
+      .header {
+        width: 100%;
+        display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử bên trong */
+        align-items: center; /* Căn chỉnh các phần tử theo chiều dọc */
+        justify-content: space-between; /* Căn chỉnh các phần tử theo chiều ngang, với khoảng cách giữa chúng */
+        background-color: #55a263;
+        color: white;
+        padding: 3px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 50px;
+        margin-bottom: -30px;
+      }
+
+      .rightHeader {
+        text-align: right; /* Căn phần tử về phía bên phải */
+      }
+
+      .rightHeader nav a {
+        margin-left: 10px; /* Tạo khoảng cách giữa các liên kết */
+        color: white; /* Màu chữ là trắng */
+        text-decoration: none;
+      }
+
+      .brand-name {
+        font-size: 2em;
+        margin-right: auto;
+      }
+
+      .redBg {
+        background-color: red;
+        color: white;
+        font-size: 50%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+      }
+
+      .container {
+        position: relative;
+        width: 80%;
+        text-align: right;
+      }
+
+      .image-text {
+        position: absolute;
+        text-align: right;
+        margin-top: 40%;
+        margin-right: 10%;
+        left: 55%;
+        font-size: large;
+        color: rgb(32, 150, 119); /* Màu chữ */
+      }
+
+      .redText {
+        color: red;
+        font-size: 1.5em;
+      }
+
+      .corner-button {
+        position: absolute;
+        top: 30%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        padding: 5px 80px;
+        background-color: orange;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        color: white;
+      }
+      .register-button {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: orange;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        color: white;
+        width: 15%;
+        padding: 6px;
+      }
+      .col-md-6 {
+        background-color: #55a263;
+      }
+      h3 {
+        color: #04aa6d;
+        text-align: center;
+      }
+      .submit-btn {
+        color: white;
+        background-color: rgb(182, 11, 11);
+        border-radius: 5px;
+        margin-right: -98%;
+      }
+      .tinhLai-btn {
+        color: white;
+        background-color: rgb(77, 11, 182);
+        border-radius: 5px;
+        margin-right: -50%;
+      }
+      .required {
+        color: red; /* Đổi màu thành đỏ */
+        font-size: 80%; /* Giảm kích thước của dấu "*" */
+        vertical-align: top; /* Đảm bảo dấu "*" được căn đầu dòng */
+      }
+     .contact-bt {
+      background-color: orange;
+            color: white;
+            border: none;
+            padding: 10px 162px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-right: -187px;
+     }
+
+     footer {
+      background-color: rgb(9, 131, 131);
+     }
+     .textFooter {
+      text-align: left;
+     }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="col-md-4 brand-name">
+          <i><b>VayNhanhSCB </b><span class="redBg"> .com</span></i>
+        </div>
+
+        <div class="col-md-8 rightHeader">
+          <nav>
+            <a href="#">UU DAI</a>
+            <a href="#">DANG KY</a>
+            <a href="#">DANG KY NHANH</a>
+            <a href="#">LIEN HE</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8">
+          <img src="https://i.ibb.co/vZy83fw/landing-home.jpg" alt="" />
+        </div>
+        <div class="col-md-4">
+          <button class="corner-button">Uu dai lon</button>
+          <div>
+            <p class="image-text">
+              Lãi xuất thấp nhất thị trường,
+              <span class="redText">0.6-0.9</span>% /tháng<br /> <br>
+              số tiền vay từ 15-25% lần lương có thể lên tới
+              <span class="redText">900 triệu</span> đồng<br /> <br>
+              thủ tục đơn giản
+              <span class="redText">không cần thế chấp</span> tài sản, hỗ trợ
+              tận nơi<br /> <br>
+              Đặc biệt <span class="redText">không thu phí hồ sơ bảo hiểm</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div
+          style="background-color: #04aa6d; padding-top: 2%; padding-bottom: 2%;"
+          class="col-md-6"
+        >
+          <button class="register-button">Dang ky</button>
+        </div>
+        <div class="col-md-3 "></div>
+      </div>
+      <form action="">
+        <div class="row">
+          <h3>Dang ky vay voi STANDARD CHARTERED <BR>Vay khong the chap len toi 3 ti dong</BR></h3>
+        </div>
+        <div class="row">
+          <div class="col-md-2 offset-md-3">
+            <label for="name"><span class="required">*</span>Ho va ten:</label>
+          </div>
+          <div class="col-md-4 offset-md-3">
+            <input type="text" placeholder="Nhap ho ten" required />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2 offset-md-3">
+            <label for="so dien thoai"><span class="required">*</span>So dien thoai:</label>
+          </div>
+          <div class="col-md-4 offset-md-3">
+            <input type="text" placeholder="Nhap so dien thoai" required />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2 offset-md-3">
+            <label for="name">Gioi tinh</label>
+          </div>
+          <div class="col-md-4 offset-md-3">
+            <select class="form-select form-select-sm mt-1">
+              <option>Nam</option>
+              <option>Nu</option>
+
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2 offset-md-3">
+            <label for="age">Do tuoi</label>
+          </div>
+          <div class="col-md-4 offset-md-3">
+            <select class="form-select form-select-sm mt-1" aria-label=".form-select-sm example" placeholder="Tu 18 den 25 tuoi">
+              <option>18 den 25</option>
+              <option>Duoi 18 tuoi</option>
+              <option>26 den 40</option>       
+            </select> 
+          </div>
+        <div class="col-6"></div>
+        </div>        
+        <div class="row">
+          <div class="col-md-2 offset-md-3">
+            <label for="cong ty" >Cong ty dang lam viec</label>
+          </div>
+          <div class="col-md-4 offset-md-3">
+            <input type="text" placeholder="Nhap ten cong ty" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2 offset-md-3">
+            <label for="muc luong">Muc luong hien tai</label>
+          </div>
+          <div class="col-md-4 offset-md-3">
+            <select class="form-select form-select-sm mt-1">
+              <option>Duoi 10 trieu dong</option>
+              <option>Tren 10 trieu dong</option>
+
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2 offset-md-3">
+            <label for="tien vay">So tien muon vay</label>
+          </div>
+          <div class="col-md-4 offset-md-3">
+            <select class="form-select form-select-sm mt-1">
+              <option>10 den 50 trieu dong</option>
+              <option>51 den 100 trieu dong</option>
+
+            </select>
+          </div>
+        </div>
+        
+
+        <div class="row">
+          <div class="col-md-3 offset-md-3">
+            <input class="float-end submit-btn" type="submit" value="submit" />
+          </div>
+          <div class="col-md-4 offset-md-3">
+            <button onclick="press()" class="tinhLai-btn">Tinh Lai</button>
+          </div>
+        </div>
+      </form>
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div
+          style="background-color: #04aa6d; padding-top: 2%; padding-bottom: 2%;"
+          class="col-md-6"
+        >
+          <button class="register-button">Dang ky nhanh</button>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+   
+    <footer>
+      <div class="container p-4">
+        <div class="row">
+          <div class="col-md-7 mb-4 mb-md-0">
+            <!-- Thêm nút liên hệ -->
+            <button class="contact-bt">Thong tin lien he</button>
+          </div><br>
+<div class="row">
+  <div class="col-md-3 textFooter">
+    <!-- Thêm số điện thoại liên hệ... -->
+    <p>&#9743 0123 456 789</p>
+    <p>&#9993 example@example.com</p>
+    <p>&#9993   example@example0000.com</p>
+    <p>&#9824 37-Ton Duc Thang, Ben Nghe, quan 1</p>
+  </div>
+  <div class="col-md-9">
+    <!-- Thêm Google Map  -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11512.65131939672!2d106.68491775105282!3d10.762362134180432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f234c6b4e5d%3A0x6a65496e16e3e9b5!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDaMOtIE5hbSBOZ3V54buIIChM4buZaSBOZ3V54buIIEdpw6FuLCBIw6AgTuG6tW5nLCDEkMOsbmggQsOsbmgsIFTDom4gU1QgQ8O0bmcgUGjGsOG7nW5n!5e0!3m2!1svi!2s!4v1644744585187!5m2!1svi!2s" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>  
+  </div>
+</div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+$("#tinhLaiArea").hide();
+
+$("#tinhLai").click(function() {
+  if ($("#tinhLaiArea").is(':visible'))
+     $().hide();
+} else {"#tinhLaiArea"
+  $("#tinhLaiArea").show();
+});
+
+$("#tinhToan").click(function() {
+  let tv = parseInt($("#tv").val());
+  let ls = parseFloat($("#ls").val());
+  let tg = parseInt($("#tg").val());
+
+  let kq = tv+tv*(ls/12)*tg;
+  $("#kqLai").html("<p>So tien can tra: " + l)
+});
+     </script>
+  </body>
+</html>

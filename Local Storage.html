@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login</title>
+  </head>
+
+  <body>
+    <!-- Các trường nhập thông tin -->
+    <input type="text" id="userInp" placeholder="Nhap username" />
+    <input type="password" id="pwInp" placeholder="Nhap password" />
+    <br />
+    <!-- Nút đăng nhập -->
+    <input type="button" id="loginBtn" value="Login" />
+    <!-- Liên kết để thay đổi mật khẩu -->
+    <a href="#" id="reChangePW">Change password</a>
+    <br />
+
+    <!-- Biểu mẫu thay đổi mật khẩu (ẩn ban đầu) -->
+    <div id="changeForm" style="display: none">
+      <hr />
+      <!-- Trường nhập mật khẩu mới và xác nhận lại -->
+      <input type="password" id="pwmInp" placeholder="Nhap password moi" />
+      <input
+        type="password"
+        id="vrpwmInp"
+        placeholder="Nhap lai password moi"
+      />
+      <!-- Nút thay đổi mật khẩu -->
+      <input type="button" id="changePwBtn" value="Change pass" />
+    </div>
+
+    <script>
+      // Ẩn biểu mẫu thay đổi mật khẩu khi trang được tải
+      document.getElementById("changeForm").style.display = "none";
+
+      // Thiết lập tên người dùng và mật khẩu mặc định trong localStorage
+      localStorage.setItem("USER", "admin");
+      localStorage.setItem("PASS", "123");
+
+      // Hàm thay đổi mật khẩu
+      function changePass() {
+        // Kiểm tra xác nhận mật khẩu
+        if (
+          document.getElementById("pwmInp").value !==
+          document.getElementById("vrpwmInp").value
+        ) {
+          alert("Verify pass incorrect!");
+        } else {
+          // Lưu mật khẩu mới vào localStorage
+          localStorage.setItem("PASS", document.getElementById("pwmInp").value);
+          alert("Password change sucess!");
+        }
+      }
+
+      // Hàm đăng nhập
+      function aptechLogin() {
+        // Lấy tên người dùng và mật khẩu từ localStorage
+        let USER = localStorage.getItem("USER");
+        let PASS = localStorage.getItem("PASS");
+
+        // So sánh tên người dùng và mật khẩu nhập vào với tên người dùng và mật khẩu lưu trữ
+        if (
+          USER === document.getElementById("userInp").value &&
+          PASS === document.getElementById("pwInp").value
+        ) {
+          alert("Login successful!");
+        } else {
+          alert("Wrong user and password.");
+        }
+        // Log thông tin đăng nhập vào console
+        console.log(
+          document.getElementById("userInp").value,
+          document.getElementById("pwInp").value
+        );
+      }
+
+      // Thêm sự kiện click cho nút đăng nhập
+      document
+        .getElementById("loginBtn")
+        .addEventListener("click", function () {
+          aptechLogin();
+        });
+
+      // Thêm sự kiện click cho nút thay đổi mật khẩu
+      document
+        .getElementById("changePwBtn")
+        .addEventListener("click", function () {
+          changePass();
+          // Ẩn biểu mẫu thay đổi mật khẩu sau khi thay đổi mật khẩu thành công
+          document.getElementById("changeForm").style.display = "none";
+        });
+
+      // Thêm sự kiện click cho liên kết để hiển thị biểu mẫu thay đổi mật khẩu
+      document
+        .getElementById("reChangePW")
+        .addEventListener("click", function () {
+          document.getElementById("changeForm").style.display = "block";
+        });
+    </script>
+  </body>
+</html>

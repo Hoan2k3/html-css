@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+ 
+<head>
+    <title>Tạo form và các điều khiển trên form</title>
+    <style>
+        .customHeader {
+            text-align: center;
+            color: red;
+        }
+ 
+        table {
+            border-collapse: collapse;
+            background-color: #ccecff;
+        }
+ 
+        td {
+            border: 1px solid #910000;
+            text-align: left;
+        }
+ 
+        .textCenter {
+            text-align: center;
+        }
+    </style>
+</head>
+ 
+<body>
+    <h2 class="customHeader">Đăng nhập</h2>
+    <form action="_blank" method="POST">
+        <label>Username: </label>
+        <input type="text" name="userName" id="userNameInput" placeholder="Nhập mã người dùng " required>
+        <br>
+        <label>Mật khẩu: </label>
+        <input type="password" name="password" id="passwordInput" placeholder="Nhập mật khẩu" required>
+        <br>
+        <input type="submit" name="submit" value="Click me" onclick="login()">
+    </form>
+    <p id="renderRes">Result will be here</p>
+    <hr>
+    <div id="cal" style="display: none;">
+        <h2 class="customHeader">Tinh toan</h2>
+        <label>ST1: </label>
+        <input type="number" id="st1" placeholder="Nhap s1" required>
+        <label>ST2: </label>
+        <input type="number" id="st2" placeholder="Nhap s2">
+        <br>
+        <input type="button" value="Cong" onclick="cong()">
+        <p id="renderCong">Result will be here</p>
+        <input type="button" value="Tru" onclick="tru()">
+        <p id="renderTru">Result will be here</p>
+    </div>
+ 
+    <script>
+        const USER = "ap";
+        const PW = "123";
+        function login() {
+            var u = document.getElementById("userNameInput").value;
+            var p = document.getElementById("passwordInput").value;
+            // console.log("us", u, "pw", p);
+ 
+            if (u == USER && p == PW) {
+                document.getElementById("renderRes").innerHTML = "Success! Welcome " + document.getElementById("userNameInput").value;
+                document.getElementById("cal").style.display = "contents"
+            } else {
+                document.getElementById("renderRes").innerHTML = "Failed!"
+            }
+ 
+        }
+ 
+        function cong() {
+            var s1 = document.getElementById("st1").value;
+            var s2 = document.getElementById("st2").value;
+            var res = parseInt(s1) + parseInt(s2);
+            document.getElementById("renderCong").innerHTML = s1 + " + " + s2 + " = " + res;
+        }
+ 
+        function tru() {
+            var s1 = document.getElementById("st1").value;
+            var s2 = document.getElementById("st2").value;
+            var res = parseInt(s1) - parseInt(s2);
+            document.getElementById("renderTru").innerHTML = s1 + " - " + s2 + " = " + res;
+        }
+ 
+    </script>
+ 
+</body>
+ 
+</html>

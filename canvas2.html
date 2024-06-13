@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .rotate {
+        animation: 1s linear infinite rotate;
+        position: relative;
+        top: $size * -1;
+        transform-origin: 50% 100%;
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas"></canvas>
+
+    <script style="margin-left: auto; margin-right: auto">
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+
+      for (let i = 0; i < 1500; i++) {
+        setTimeout(function () {
+          ctx.clearRect(0, 0, c.width, c.height);
+          drawArrow(i);
+        }, 1 * i);
+      }
+
+      function drawArrow(i) {
+        i += 3;
+        ctx.beginPath(); // Define a new Path:
+
+        // Diem bat dau
+        ctx.moveTo(i + 10, 10);
+        // Ve diem ket thuc
+        ctx.lineTo(i + 50, 10);
+
+        ctx.lineTo(i + 50, 0);
+
+        ctx.lineTo(i + 60, 15);
+
+        ctx.lineTo(i + 50, 30);
+
+        ctx.lineTo(i + 50, 20);
+
+        ctx.lineTo(i + 10, 20);
+
+        ctx.lineTo(i + 10, 10);
+
+        //css
+        ctx.fillStyle = "red";
+        ctx.fill();
+
+        // Stroke it (Do the Drawing)
+        ctx.stroke();
+      }
+    </script>
+  </body>
+</html>

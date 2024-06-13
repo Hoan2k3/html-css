@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tạo bảng</title>
+    <style>
+      body {
+        background-color: #ffedca;
+      }
+      table {
+        width: 600px;
+        font-size: xx-large;
+        margin-left: 10px;
+      }
+      table,
+      th,
+      td {
+        border: solid 1px black;
+        border-collapse: collapse;
+      }
+
+      th {
+        color: white;
+      }
+      img {
+        float: left;
+      }
+      h1 {
+        font-size: xxx-large;
+        color: #cc6600;
+      }
+      /* bảng dc dí màu khi rơ chuột, lưu ý bảng k dc sử dụng màu background mới dc*/
+      /* tr:hover{
+            background-color:blue;
+            cursor:pointer;
+            } */
+      table tr:nth-child(odd) {
+        background-color: #ffedca;
+      }
+      table tr:nth-child(even) {
+        background-color: white;
+      }
+      table tr:nth-child(1) {
+        background-color: #cc6600;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./blue-curve-background_53876-113112.png" width="30%" />
+    <h1>Các món ngon Hà Nội</h1>
+    <table style="margin-left: 200px">
+      <tr>
+        <th>STT</th>
+        <th>Tên Món Ăn</th>
+      </tr>
+      <tr>
+        <td>1.</td>
+        <td>Bánh cuốn thanh trì</td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td>Xôi Hà Nội</td>
+      </tr>
+      <tr>
+        <td>3.</td>
+        <td>Chả cá Lạ Vọng</td>
+      </tr>
+      <tr>
+        <td>4.</td>
+        <td>Cháo Cóc</td>
+      </tr>
+      <tr>
+        <td>5.</td>
+        <td>Bánh Gai Ninh Giang</td>
+      </tr>
+      <tr>
+        <td>6.</td>
+        <td>Bún Thang Hà Nội</td>
+      </tr>
+      <tr>
+        <td>7.</td>
+        <td>Canh Lằng</td>
+      </tr>
+      <tr>
+        <td>8.</td>
+        <td>Vịt Quay Lạng Sơn</td>
+      </tr>
+    </table>
+  </body>
+</html>
